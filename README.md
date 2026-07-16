@@ -6,6 +6,7 @@
 ![tmux](https://img.shields.io/badge/tmux-Terminal_Multiplexer-1BB91F)
 ![Project](https://img.shields.io/badge/Home_Lab-AWS-blue)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
+
 Deploying and managing a dedicated Palworld server on Amazon EC2 using AWS networking, Linux administration, and security best practices.
 
 ---
