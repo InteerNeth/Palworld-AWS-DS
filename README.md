@@ -21,7 +21,7 @@ The objective was not only to host the game, but also to gain practical experien
 
 ## Architecture
 
-![Architecture](architecture/architecture.png)
+![Architecture](Palworld-AWS-DS/System-Architecture.png)
 
 ---
 
