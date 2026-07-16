@@ -1,4 +1,3 @@
-# Palworld-AWS-DS
 # AWS Palworld Dedicated Server Home Lab
 
 ## Objective
