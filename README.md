@@ -1,5 +1,11 @@
 # AWS Palworld Dedicated Server Home Lab
-
+![Amazon EC2](https://img.shields.io/badge/Amazon-EC2-FF9900?logo=amazonaws&logoColor=white)
+![Amazon VPC](https://img.shields.io/badge/Amazon-VPC-FF9900?logo=amazonaws&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-Ubuntu-FCC624?logo=linux&logoColor=black)
+![SSH](https://img.shields.io/badge/SSH-Remote_Admin-black?logo=gnubash&logoColor=white)
+![tmux](https://img.shields.io/badge/tmux-Terminal_Multiplexer-1BB91F)
+![Project](https://img.shields.io/badge/Home_Lab-AWS-blue)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 Deploying and managing a dedicated Palworld server on Amazon EC2 using AWS networking, Linux administration, and security best practices.
 
 ---
