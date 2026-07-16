@@ -1,34 +1,153 @@
 # AWS Palworld Dedicated Server Home Lab
 
-## Objective
-Deploy a Palworld dedicated server on AWS EC2.
+Deploying and managing a dedicated Palworld server on Amazon EC2 using AWS networking, Linux administration, and security best practices.
+
+---
+
+## Project Overview
+
+This project demonstrates how to deploy, configure, and maintain a dedicated Palworld server on AWS.
+
+The objective was not only to host the game, but also to gain practical experience with:
+
+- Amazon EC2
+- VPC Networking
+- Security Groups
+- Linux Server Administration
+- Remote Server Management
+- Game Server Maintenance
+
+---
+
+## Architecture
+
+![Architecture](architecture/architecture.png)
+
+---
 
 ## AWS Services Used
-- EC2
-- VPC
-- Security Groups
-- Elastic IP
 
-## Steps
-1. Launch Ubuntu EC2
-2. Configure Security Groups
-3. SSH into the server
-4. Install SteamCMD
-5. Install the Palworld server
-6. Configure settings
-7. Keep the server running with tmux
-8. Update the server after game patches
+| Service | Purpose |
+|----------|---------|
+| Amazon EC2 | Hosts the Ubuntu server running Palworld |
+| Amazon VPC | Provides network isolation |
+| Public Subnet | Allows internet connectivity |
+| Internet Gateway | Enables inbound/outbound internet access |
+| Elastic IP | Provides a static public IP |
+| Security Groups | Controls inbound/outbound traffic |
 
-## Challenges
-- Permission denied errors
-- tmux session management
-- Opening the correct ports
+---
 
-## What I Learned
-- Linux administration
-- EC2 management
-- Networking basics
-- Server maintenance
+## System Specifications
 
-## System Architecture
-<img width="831" height="1362" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/53fef097-147a-49ce-9b37-2f459aa50d20" />
+| Component | Value |
+|-----------|------|
+| OS | Ubuntu Server 24.04 LTS |
+| Instance Type | m7i-flex.large |
+| Region | us-east-1 *(replace with your actual region)* |
+| Game | Palworld Dedicated Server |
+
+---
+
+## Network Configuration
+
+### Inbound Rules
+
+| Port | Protocol | Purpose |
+|------|----------|---------|
+| 22 | TCP | SSH Remote Administration |
+| 8211 | UDP | Palworld Game Traffic |
+
+---
+
+## Deployment Process
+
+1. Launch an Ubuntu EC2 instance.
+2. Allocate and associate an Elastic IP.
+3. Configure Security Group rules.
+4. Connect via SSH.
+5. Install SteamCMD.
+6. Download the Palworld Dedicated Server.
+7. Configure `PalWorldSettings.ini`.
+8. Start the server using `tmux`.
+9. Verify client connectivity.
+
+---
+
+## Updating the Server
+
+Whenever a Palworld update is released:
+
+1. Stop the running server.
+2. Update the server using SteamCMD.
+3. Restart the dedicated server.
+4. Verify the server version.
+
+---
+
+## Challenges Encountered
+
+### Permission Issues
+
+Some server files required elevated permissions during installation.
+
+**Solution**
+
+- Corrected ownership using `chown`
+- Updated file permissions using `chmod`
+
+---
+
+### Keeping the Server Running
+
+Closing the SSH session terminated the server process.
+
+**Solution**
+
+Used `tmux` to keep the server running independently of the SSH connection.
+
+---
+
+### Network Connectivity
+
+Players could not connect.
+
+**Solution**
+
+Verified:
+
+- Security Group rules
+- Public IP
+- Required UDP ports
+- Palworld configuration
+
+---
+
+## Skills Demonstrated
+
+- AWS EC2
+- VPC Networking
+- Elastic IP Management
+- Security Group Configuration
+- Linux Administration
+- SSH
+- SteamCMD
+- tmux
+- Server Troubleshooting
+- Game Server Deployment
+
+---
+
+## Future Improvements
+
+- CloudWatch Monitoring
+- Automated Backups
+- Terraform Deployment
+- Auto Recovery
+- Automated Update Script
+
+---
+
+## Lessons Learned
+
+This project provided practical experience deploying and maintaining a production-like Linux server on AWS. It reinforced concepts related to networking, security, Linux administration, and operational troubleshooting while managing a live game server.
