@@ -30,4 +30,5 @@ Deploy a Palworld dedicated server on AWS EC2.
 - Networking basics
 - Server maintenance
 
+##System Architecture
 <img width="831" height="1362" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/53fef097-147a-49ce-9b37-2f459aa50d20" />
