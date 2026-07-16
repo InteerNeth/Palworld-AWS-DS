@@ -44,7 +44,7 @@ The objective was not only to host the game, but also to gain practical experien
 |-----------|------|
 | OS | Ubuntu Server 24.04 LTS |
 | Instance Type | m7i-flex.large |
-| Region | us-east-1 *(replace with your actual region)* |
+| Region | ap-southeast-1 |
 | Game | Palworld Dedicated Server |
 
 ---
